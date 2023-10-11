@@ -1,4 +1,4 @@
-package com.baeldung.ls;
+package co.com.jorgecabrerasouto.ls;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

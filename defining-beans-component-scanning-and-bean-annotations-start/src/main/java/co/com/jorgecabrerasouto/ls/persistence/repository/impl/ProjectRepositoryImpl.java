@@ -1,12 +1,15 @@
-package com.baeldung.ls.persistence.repository.impl;
+package co.com.jorgecabrerasouto.ls.persistence.repository.impl;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-import com.baeldung.ls.persistence.model.Project;
-import com.baeldung.ls.persistence.repository.IProjectRepository;
+import org.springframework.stereotype.Repository;
 
+import co.com.jorgecabrerasouto.ls.persistence.model.Project;
+import co.com.jorgecabrerasouto.ls.persistence.repository.IProjectRepository;
+
+@Repository
 public class ProjectRepositoryImpl implements IProjectRepository {
 
     private List<Project> projects = new ArrayList<>();

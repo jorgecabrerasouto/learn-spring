@@ -1,8 +1,8 @@
-package com.baeldung.ls.persistence.repository;
+package co.com.jorgecabrerasouto.ls.persistence.repository;
 
 import java.util.Optional;
 
-import com.baeldung.ls.persistence.model.Project;
+import co.com.jorgecabrerasouto.ls.persistence.model.Project;
 
 public interface IProjectRepository {
 
