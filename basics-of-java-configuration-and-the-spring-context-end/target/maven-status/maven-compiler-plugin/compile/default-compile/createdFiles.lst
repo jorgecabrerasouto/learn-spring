@@ -1,0 +1,7 @@
+co\com\jorgecabrerasouto\ls\spring\PersistanceConfig.class
+com\baeldung\ls\persistence\model\Project.class
+co\com\jorgecabrerasouto\ls\LsApp.class
+com\baeldung\ls\persistence\repository\impl\ProjectRepositoryImpl.class
+com\baeldung\ls\service\IProjectService.class
+com\baeldung\ls\service\impl\ProjectServiceImpl.class
+com\baeldung\ls\persistence\repository\IProjectRepository.class
