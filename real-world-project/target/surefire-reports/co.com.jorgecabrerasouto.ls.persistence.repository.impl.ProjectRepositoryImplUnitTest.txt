@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: co.com.jorgecabrerasouto.ls.persistence.repository.impl.ProjectRepositoryImplUnitTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.061 s - in co.com.jorgecabrerasouto.ls.persistence.repository.impl.ProjectRepositoryImplUnitTest
