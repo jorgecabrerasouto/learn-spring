@@ -1,11 +1,11 @@
-package com.baeldung.ls.persistence.repository.impl;
+package co.com.jorgecabrerasouto.ls.persitence.repository.Impl;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-import com.baeldung.ls.persistence.model.Project;
-import com.baeldung.ls.persistence.repository.IProjectRepository;
+import co.com.jorgecabrerasouto.ls.persistence.model.Project;
+import co.com.jorgecabrerasouto.ls.persitence.repository.IProjectRepository;
 
 public class ProjectRepositoryImpl implements IProjectRepository {
 
