@@ -1,0 +1,21 @@
+2023-08-15  INFO 30668 --- [main] co.com.jorgecabrerasouto.ls.LsApp        : Starting LsApp using Java 17.0.5 with PID 30668 (C:\Users\jorge\git\learn-spring-jc\logging-in-a-spring-boot-project-end\target\classes started by jorge in C:\Users\jorge\git\learn-spring-jc\logging-in-a-spring-boot-project-end)
+2023-08-15 DEBUG 30668 --- [main] co.com.jorgecabrerasouto.ls.LsApp        : Running with Spring Boot v3.1.4, Spring v6.0.12
+2023-08-15  INFO 30668 --- [main] co.com.jorgecabrerasouto.ls.LsApp        : No active profile set, falling back to 1 default profile: "default"
+2023-08-15  INFO 30668 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-15  INFO 30668 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 969 ms
+2023-08-15 DEBUG 30668 --- [main] c.c.j.l.service.impl.ProjectServiceImpl  : Project Service >> Savinging Project Project [id=-912691637554996924, name=My First Project] 
+
+2023-08-15 DEBUG 30668 --- [main] c.c.j.l.service.impl.ProjectServiceImpl  : Project Service >> Finding Project By Id 1
+2023-08-15  INFO 30668 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-15  INFO 30668 --- [main] co.com.jorgecabrerasouto.ls.LsApp        : Started LsApp in 1.894 seconds (process running for 2.505)
+2023-11-15  INFO 30668 --- [RMI TCP Connection(13)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-11-15  INFO 33712 --- [main] co.com.jorgecabrerasouto.ls.LsApp        : Starting LsApp using Java 17.0.5 with PID 33712 (C:\Users\jorge\git\learn-spring-jc\logging-in-a-spring-boot-project-end\target\classes started by jorge in C:\Users\jorge\git\learn-spring-jc\logging-in-a-spring-boot-project-end)
+2023-11-15 DEBUG 33712 --- [main] co.com.jorgecabrerasouto.ls.LsApp        : Running with Spring Boot v3.1.4, Spring v6.0.12
+2023-11-15  INFO 33712 --- [main] co.com.jorgecabrerasouto.ls.LsApp        : No active profile set, falling back to 1 default profile: "default"
+2023-11-15  INFO 33712 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-11-15  INFO 33712 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 815 ms
+2023-11-15 DEBUG 33712 --- [main] c.c.j.l.service.impl.ProjectServiceImpl  : Project Service >> Saving Project Project [id=-290711556047799348, name=My First Project] 
+
+2023-11-15 DEBUG 33712 --- [main] c.c.j.l.service.impl.ProjectServiceImpl  : Project Service >> Finding Project By Id 1
+2023-11-15  INFO 33712 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-15  INFO 33712 --- [main] co.com.jorgecabrerasouto.ls.LsApp        : Started LsApp in 1.688 seconds (process running for 2.155)
