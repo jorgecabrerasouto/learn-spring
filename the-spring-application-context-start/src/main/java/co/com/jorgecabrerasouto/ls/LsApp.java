@@ -1,5 +1,7 @@
 package co.com.jorgecabrerasouto.ls;
 
+// Modified in Module 2. Lesson 8.
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
@@ -15,8 +17,8 @@ public class LsApp {
     public static void main(final String... args) {
         SpringApplication.run(LsApp.class, args);
 
-        AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext("com.baeldung.ls.persistence.repository");
-        ctx.scan("com.baeldung.ls.service");
+        AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext("co.com.jorgecabrerasouto.ls.persistence.repository");
+        ctx.scan("co.com.jorgecabrerasouto.ls.service");
 
         LOG.info("context created with id {}", ctx.getId());
 
