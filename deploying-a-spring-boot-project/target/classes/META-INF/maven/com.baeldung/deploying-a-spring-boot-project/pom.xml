@@ -44,10 +44,10 @@
     <build>
         <plugins>
         <!-- If we're not using the spring-boot-starter-parent, then we'll need to include the plugin ourselves -->
-<!--             <plugin> -->
-<!--                 <groupId>org.springframework.boot</groupId> -->
-<!--                 <artifactId>spring-boot-maven-plugin</artifactId> -->
-<!--             </plugin> -->
+		<!--             <plugin> -->
+		<!--                 <groupId>org.springframework.boot</groupId> -->
+		<!--                 <artifactId>spring-boot-maven-plugin</artifactId> -->
+		<!--             </plugin> -->
         </plugins>
     </build>
 
