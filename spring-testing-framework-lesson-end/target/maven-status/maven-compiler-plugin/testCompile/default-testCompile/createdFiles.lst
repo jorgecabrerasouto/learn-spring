@@ -1,0 +1,5 @@
+co\com\jorgecabrerasouto\ls\service\ContextIntegrationTest.class
+co\com\jorgecabrerasouto\ls\spring\TestConfig.class
+co\com\jorgecabrerasouto\ls\service\ProjectServiceAlternativeUnitTest.class
+co\com\jorgecabrerasouto\ls\service\ProjectServiceIntegrationTest.class
+co\com\jorgecabrerasouto\ls\service\ProjectServiceUnitTest.class

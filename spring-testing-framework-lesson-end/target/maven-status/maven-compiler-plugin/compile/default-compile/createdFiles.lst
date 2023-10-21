@@ -1,0 +1,6 @@
+co\com\jorgecabrerasouto\ls\service\IProjectService.class
+co\com\jorgecabrerasouto\ls\LsApp.class
+co\com\jorgecabrerasouto\ls\persistence\model\Project.class
+co\com\jorgecabrerasouto\ls\service\impl\ProjectServiceImpl.class
+co\com\jorgecabrerasouto\ls\persistence\repository\impl\ProjectRepositoryImpl.class
+co\com\jorgecabrerasouto\ls\persistence\repository\IProjectRepository.class
