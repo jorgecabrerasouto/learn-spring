@@ -5,7 +5,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
 
-@SpringJUnitConfig
+import co.com.jorgecabrerasouto.ls.spring.TestConfig;
+
+@SpringJUnitConfig(value = TestConfig.class)
 public class ContextIntegrationTest {
 
     @Autowired
