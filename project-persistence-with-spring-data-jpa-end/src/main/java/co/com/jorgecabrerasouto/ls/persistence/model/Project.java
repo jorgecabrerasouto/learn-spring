@@ -4,13 +4,22 @@ import java.time.LocalDate;
 import java.util.Objects;
 import java.util.Random;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class Project {
 
+    @Id
     private Long id;
 
     private String name;
 
     private LocalDate dateCreated;
+    
+    public Project() {
+        
+    }
 
     public Project(Long id, String name, LocalDate dateCreated) {
         if(Objects.isNull(id)) {
