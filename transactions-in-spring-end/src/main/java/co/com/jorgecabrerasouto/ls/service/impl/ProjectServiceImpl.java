@@ -1,20 +1,29 @@
 package co.com.jorgecabrerasouto.ls.service.impl;
 
+import java.time.LocalDate;
+import java.util.HashSet;
 import java.util.Optional;
+import java.util.Set;
 
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
+import co.com.jorgecabrerasouto.ls.exception.TaskNotSavedException;
 import co.com.jorgecabrerasouto.ls.persistence.model.Project;
+import co.com.jorgecabrerasouto.ls.persistence.model.Task;
 import co.com.jorgecabrerasouto.ls.persistence.repository.IProjectRepository;
 import co.com.jorgecabrerasouto.ls.service.IProjectService;
+import co.com.jorgecabrerasouto.ls.service.ITaskService;
 
 @Service
 public class ProjectServiceImpl implements IProjectService {
 
     private IProjectRepository projectRepository;
+    private ITaskService taskService;
 
-    public ProjectServiceImpl(IProjectRepository projectRepository) {
+    public ProjectServiceImpl(IProjectRepository projectRepository, ITaskService taskService) {
         this.projectRepository = projectRepository;
+        this.taskService = taskService;
     }
 
     @Override
@@ -30,6 +39,27 @@ public class ProjectServiceImpl implements IProjectService {
     @Override
     public Project save(Project project) {
         return projectRepository.save(project);
+    }
+
+    @Transactional(rollbackFor = TaskNotSavedException.class)
+    @Override
+    public void CreateProjectWithTasks() throws TaskNotSavedException {
+        Project project = new Project("Project 1", LocalDate.now());
+
+        Project newProject = save(project);
+
+        Task task1 = new Task("Task 1", "Project 1 Task 1", LocalDate.now(), LocalDate.now()
+            .plusDays(7));
+
+        taskService.save(task1);
+
+        Set<Task> tasks = new HashSet<>();
+        tasks.add(task1);
+
+        newProject.setTasks(tasks);
+
+        save(newProject);
+        
     }
 
 }

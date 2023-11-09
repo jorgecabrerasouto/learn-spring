@@ -2,6 +2,7 @@ package co.com.jorgecabrerasouto.ls.service.impl;
 
 import org.springframework.stereotype.Service;
 
+import co.com.jorgecabrerasouto.ls.exception.TaskNotSavedException;
 import co.com.jorgecabrerasouto.ls.persistence.model.Task;
 import co.com.jorgecabrerasouto.ls.persistence.repository.ITaskRepository;
 import co.com.jorgecabrerasouto.ls.service.ITaskService;
@@ -21,8 +22,10 @@ public class TaskServiceImpl implements ITaskService {
     }
 
     @Override
-    public Task save(Task task) {
-        return taskRepository.save(task);
+    public Task save(Task task) throws TaskNotSavedException {
+        // return taskRepository.save(task);
+        throw new TaskNotSavedException("Unable to save task");
+
     }
 
 }
