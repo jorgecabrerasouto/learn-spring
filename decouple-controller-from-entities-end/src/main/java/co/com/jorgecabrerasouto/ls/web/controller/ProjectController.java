@@ -47,7 +47,7 @@ public class ProjectController {
         //Project project = new Project(dto.getName(), dto.getDateCreated());
         Project project = new Project(dto.getName(), null);
         
-        if(StringUtils.isEmpty((dto.getId()))) {
+        if(!StringUtils.hasLength(Long.toString(dto.getId()))) {
             project.setId(dto.getId());
         }
         return project;

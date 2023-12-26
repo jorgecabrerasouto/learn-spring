@@ -2,11 +2,7 @@ package co.com.jorgecabrerasouto.ls.web.dto;
 
 import java.time.LocalDate;
 
-import co.com.jorgecabrerasouto.ls.persistence.model.Task;
 import co.com.jorgecabrerasouto.ls.persistence.model.TaskStatus;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
 
 public class TaskDto {
     

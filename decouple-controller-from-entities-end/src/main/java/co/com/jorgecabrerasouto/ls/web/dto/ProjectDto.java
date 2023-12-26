@@ -1,11 +1,8 @@
 package co.com.jorgecabrerasouto.ls.web.dto;
 
-import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
-import java.util.stream.Collectors;
 
-import co.com.jorgecabrerasouto.ls.persistence.model.Project;
 import co.com.jorgecabrerasouto.ls.persistence.model.Task;
 
 public class ProjectDto {
