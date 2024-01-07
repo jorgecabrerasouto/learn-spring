@@ -7,6 +7,7 @@ import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -19,6 +20,7 @@ import co.com.jorgecabrerasouto.ls.service.IProjectService;
 import co.com.jorgecabrerasouto.ls.web.dto.ProjectDto;
 import co.com.jorgecabrerasouto.ls.web.dto.TaskDto;
 import co.com.jorgecabrerasouto.ls.web.dto.TaskListDto;
+import jakarta.validation.Valid;
 
 @Controller
 @RequestMapping(value = "/projects")
@@ -54,9 +56,13 @@ public class ProjectController {
     }
 
     @PostMapping
-    public String addProject(ProjectDto project) {
+    public String addProject(@Valid @ModelAttribute("project") ProjectDto project, BindingResult bindingResult) {
+        
+        if (bindingResult.hasErrors()){
+            return "new-project";
+        }
+        
         projectService.save(convertToEntity(project));
-
         return "redirect:/projects";
     }
 
