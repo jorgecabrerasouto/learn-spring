@@ -1,9 +1,12 @@
 package co.com.jorgecabrerasouto.ls.web.controller;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -25,7 +28,6 @@ public class ProjectController {
     public ProjectController(IProjectService projectService) {
         this.projectService = projectService;
     }
-
     //
 
     @GetMapping(value = "/{id}")
@@ -70,6 +72,15 @@ public class ProjectController {
             task.setId(dto.getId());
         }
         return task;
+    }
+
+    @GetMapping
+    public String getProjects(Model model) {
+        Iterable<Project> projects = projectService.findAll();
+        List<ProjectDto> projectDtos = new ArrayList<>();
+        projects.forEach(p -> projectDtos.add(convertToDto(p)));
+        model.addAttribute("projects", projectDtos);
+        return "projects";
     }
 
 }
