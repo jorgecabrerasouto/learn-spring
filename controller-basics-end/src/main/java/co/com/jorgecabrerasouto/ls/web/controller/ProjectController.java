@@ -1,14 +1,20 @@
 package co.com.jorgecabrerasouto.ls.web.controller;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
 import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
@@ -38,9 +44,30 @@ public class ProjectController {
     }
 
     @PostMapping
-    public void create(@RequestBody ProjectDto newProject) {
+    @ResponseStatus(HttpStatus.CREATED)
+    public ProjectDto create(@RequestBody ProjectDto newProject) {
         Project entity = convertToEntity(newProject);
-        this.projectService.save(entity);
+        return this.convertToDto(this.projectService.save(entity));
+    }
+
+    @GetMapping
+    public Collection<ProjectDto> findAll() {
+        Iterable<Project> allProjects = this.projectService.findAll();
+        List<ProjectDto> projectDtos = new ArrayList<>();
+        allProjects.forEach(p -> projectDtos.add(convertToDto(p)));
+        return projectDtos;
+    }
+
+    @PutMapping("/{id}")
+    public ProjectDto updateProject(@PathVariable("id") Long id, @RequestBody ProjectDto updatedProject) {
+        Project projectEntity = convertToEntity(updatedProject);
+        return this.convertToDto(this.projectService.save(projectEntity));
+    }
+
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void deleteProject(@PathVariable("id") Long id) {
+        projectService.delete(id);
     }
 
     protected ProjectDto convertToDto(Project entity) {

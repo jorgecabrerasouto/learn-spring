@@ -38,9 +38,30 @@ public class ProjectController {
     }
 
     @PostMapping
-    public void create(@RequestBody ProjectDto newProject) {
+    @ResponseStatus(HttpStatus.CREATED)
+    public ProjectDto create(@RequestBody ProjectDto newProject) {
         Project entity = convertToEntity(newProject);
-        this.projectService.save(entity);
+        return this.convertToDto(this.projectService.save(entity));
+    }
+
+    @GetMapping
+    public Collection<ProjectDto> findAll() {
+        Iterable<Project> allProjects = this.projectService.findAll();
+        List<ProjectDto> projectDtos = new ArrayList<>();
+        allProjects.forEach(p -> projectDtos.add(convertToDto(p)));
+        return projectDtos;
+    }
+
+    @PutMapping("/{id}")
+    public ProjectDto updateProject(@PathVariable("id") Long id, @RequestBody ProjectDto updatedProject) {
+        Project projectEntity = convertToEntity(updatedProject);
+        return this.convertToDto(this.projectService.save(projectEntity));
+    }
+
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void deleteProject(@PathVariable("id") Long id) {
+        projectService.delete(id);
     }
 
     protected ProjectDto convertToDto(Project entity) {

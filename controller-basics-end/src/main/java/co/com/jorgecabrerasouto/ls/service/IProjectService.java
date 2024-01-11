@@ -10,4 +10,6 @@ public interface IProjectService {
     Project save(Project project);
 
     Iterable<Project> findAll();
+
+    void delete(Long id);
 }
