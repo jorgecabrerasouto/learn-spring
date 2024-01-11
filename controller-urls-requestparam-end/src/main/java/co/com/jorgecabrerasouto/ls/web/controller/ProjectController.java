@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
@@ -51,8 +52,8 @@ public class ProjectController {
     }
 
     @GetMapping
-    public Collection<ProjectDto> findAll() {
-        Iterable<Project> allProjects = this.projectService.findAll();
+    public Collection<ProjectDto> findProjects(@RequestParam(name = "name", defaultValue ="") String name) {
+        Iterable<Project> allProjects = this.projectService.findByName(name);
         List<ProjectDto> projectDtos = new ArrayList<>();
         allProjects.forEach(p -> projectDtos.add(convertToDto(p)));
         return projectDtos;
