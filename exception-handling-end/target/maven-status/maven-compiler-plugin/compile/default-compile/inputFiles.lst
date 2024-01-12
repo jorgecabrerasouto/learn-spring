@@ -1,0 +1,15 @@
+C:\Users\jorge\git\learn-spring-jc\exception-handling-end\src\main\java\com\baeldung\ls\service\IProjectService.java
+C:\Users\jorge\git\learn-spring-jc\exception-handling-end\src\main\java\com\baeldung\ls\service\impl\TaskServiceImpl.java
+C:\Users\jorge\git\learn-spring-jc\exception-handling-end\src\main\java\com\baeldung\ls\web\controller\ProjectController.java
+C:\Users\jorge\git\learn-spring-jc\exception-handling-end\src\main\java\com\baeldung\ls\web\dto\ProjectDto.java
+C:\Users\jorge\git\learn-spring-jc\exception-handling-end\src\main\java\com\baeldung\ls\service\ITaskService.java
+C:\Users\jorge\git\learn-spring-jc\exception-handling-end\src\main\java\com\baeldung\ls\persistence\model\TaskStatus.java
+C:\Users\jorge\git\learn-spring-jc\exception-handling-end\src\main\java\com\baeldung\ls\persistence\model\Task.java
+C:\Users\jorge\git\learn-spring-jc\exception-handling-end\src\main\java\com\baeldung\ls\persistence\model\Project.java
+C:\Users\jorge\git\learn-spring-jc\exception-handling-end\src\main\java\com\baeldung\ls\persistence\repository\ITaskRepository.java
+C:\Users\jorge\git\learn-spring-jc\exception-handling-end\src\main\java\com\baeldung\ls\service\impl\ProjectServiceImpl.java
+C:\Users\jorge\git\learn-spring-jc\exception-handling-end\src\main\java\com\baeldung\ls\persistence\repository\IProjectRepository.java
+C:\Users\jorge\git\learn-spring-jc\exception-handling-end\src\main\java\com\baeldung\ls\LsApp.java
+C:\Users\jorge\git\learn-spring-jc\exception-handling-end\src\main\java\com\baeldung\ls\config\AppConfig.java
+C:\Users\jorge\git\learn-spring-jc\exception-handling-end\src\main\java\com\baeldung\ls\config\WebConfig.java
+C:\Users\jorge\git\learn-spring-jc\exception-handling-end\src\main\java\com\baeldung\ls\web\dto\TaskDto.java
