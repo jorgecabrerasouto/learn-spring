@@ -52,7 +52,7 @@ public class ProjectController {
     }
 
     @GetMapping
-    public Collection<ProjectDto> findProjects(@RequestParam(name = "name", defaultValue ="") String name) {
+    public Collection<ProjectDto> findProjects(@RequestParam(name = "name", defaultValue = "") String name) {
         Iterable<Project> allProjects = this.projectService.findByName(name);
         List<ProjectDto> projectDtos = new ArrayList<>();
         allProjects.forEach(p -> projectDtos.add(convertToDto(p)));
